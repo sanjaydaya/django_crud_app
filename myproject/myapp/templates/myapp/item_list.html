@@ -1,0 +1,29 @@
+<!-- myapp/templates/myapp/item_list.html -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Item List</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Item List</h1>
+        <a href="{% url 'item_create' %}" class="btn btn-primary mb-3">Create New Item</a>
+        <div class="list-group">
+            {% for item in items %}
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>{{ item.name }} - ${{ item.price }}</span>
+                    <div>
+                        <a href="{% url 'item_update' item.id %}" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="{% url 'item_delete' item.id %}" class="btn btn-danger btn-sm">Delete</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

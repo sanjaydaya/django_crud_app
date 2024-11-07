@@ -1,0 +1,17 @@
+# Django-specific files
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+
+# Ignore virtual environment
+venv/
+env/
+
+# Ignore configuration files
+*.env
+.env
+
+# Ignore system files
+.DS_Store
