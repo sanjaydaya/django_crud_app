@@ -19,8 +19,9 @@ simple **CRUD** (Create, Read, Update, Delete) application built with **Django**
 1. **Clone the repo**:
 
     ```bash
-    git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
-    cd YOUR_REPOSITORY_NAME
+    git clone git@github.com:sanjaydaya/django_crud_app.git
+
+    cd myproject
     ```
 
 2. **Create a virtual environment**:
